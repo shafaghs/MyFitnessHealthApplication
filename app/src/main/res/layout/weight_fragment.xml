@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:id="@+id/lbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="@dimen/layout_margin"
+            android:layout_marginRight="@dimen/layout_margin">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Lbs"
+                android:layout_weight="1"
+                android:textSize="@dimen/font_size" />
+
+            <EditText
+                android:id="@+id/lbs_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="120 lbs"
+                android:maxLength="5"
+                android:inputType="number|numberDecimal"
+                android:paddingBottom="@dimen/edit_text_bpadding"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kilogram"
+            android:id="@+id/kgBut"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/kg"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbs"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+       >
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="@dimen/layout_margin"
+            android:layout_marginRight="@dimen/layout_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kilogram"
+                android:textSize="@dimen/font_size"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/kg_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="60 kg"
+                android:maxLength="5"
+                android:inputType="number|numberDecimal"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/edit_text_bpadding"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pound"
+            android:id="@+id/poundBut"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/doneBut"
+        android:layout_below="@id/kg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        />
+
+</RelativeLayout>

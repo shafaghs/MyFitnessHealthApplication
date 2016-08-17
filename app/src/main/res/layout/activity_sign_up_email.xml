@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="9"
+    android:orientation="vertical"
+    tools:context="com.shafagh.myfitnesshealthapplication.SignUpEmail">
+
+     <include
+    android:id="@+id/app_bar"
+    layout="@layout/app_bar" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:inputType="textPersonName"
+        android:hint="User Name"
+        android:ems="10"
+        style="@style/Edittext_fontSize"
+        android:id="@+id/user_name"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/user_msg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="16dp"
+        android:textColor="@color/red"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="Email@ABC.com"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:layout_weight="1"
+        style="@style/Edittext_fontSize"
+        android:id="@+id/email" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:layout_weight="1"
+        style="@style/Edittext_fontSize"
+        android:ems="10"
+        android:id="@+id/password" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_weight="1"
+        style="@style/Edittext_fontSize"
+        android:hint="Confirm Password"
+        android:id="@+id/con_password" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/register"
+        android:onClick="register"
+        android:layout_gravity="center_horizontal"
+        style="@style/ButtonStyleFillIn"/>
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

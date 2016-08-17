@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="12">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="10"
+        style="@style/RLmargin" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="How active are you?" />
+
+    <RadioGroup
+        android:id="@+id/activity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="11"
+        android:theme="@style/MyRadioButton">
+
+        <RadioButton
+            android:id="@+id/sedentary"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="@string/not_very_active_title"
+            android:theme="@style/MyRadioButton" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/left_pad_radio_info"
+            android:text="@string/not_very_active" />
+
+        <RadioButton
+            android:id="@+id/lightActive"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="@string/lightly_active_title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/left_pad_radio_info"
+            android:text="@string/lightly_active" />
+
+        <RadioButton
+            android:id="@+id/moderateActive"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="@string/moderatetely_active_title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/left_pad_radio_info"
+            android:text="@string/moderatetely_active" />
+
+        <RadioButton
+            android:id="@+id/veryActive"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="@string/very_active_title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/left_pad_radio_info"
+            android:text="@string/very_active" />
+
+        <RadioButton
+            android:id="@+id/extraActive"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="@string/extra_active_title" />
+    </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/left_pad_radio_info"
+            android:text="@string/extra_active" />
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="submit"
+            android:text="Next"
+            style="@style/ButtonStyleFillIn"/>
+
+
+</LinearLayout>

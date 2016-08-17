@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">MyFitness&amp;HealthApplication</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up_email">Sign Up with Email</string>
+    <string name="sign_up_facebook">Sign Up with Facebook</string>
+    <string name="sign_up_google">Sign Up with Google</string>
+    <string name="info_text">This Information is used to calculate an accurate calories goal for you</string>
+    <string name="dialog_fire_missiles">Sign Up with Google</string>
+    <string name="fire">go</string>
+    <string name="cancel">can</string>
+    <string name="extra_active">If you are extra active (very hard exercise/sports and physical job or 2x training)</string>
+    <string name="extra_active_title">Extra active </string>
+    <string name="very_active">If you are very active (hard exercise/sports 6–7 days a week)</string>
+    <string name="very_active_title">Very active </string>
+    <string name="moderatetely_active">If you are moderatetely active (moderate exercise/sports 3–5 days/week)</string>
+    <string name="moderatetely_active_title">Moderatetely active </string>
+    <string name="lightly_active">If you are lightly active (light exercise/sports 1–3 days/week)</string>
+    <string name="lightly_active_title">Lightly active</string>
+    <string name="not_very_active">If you are sedentary (little or no exercise)</string>
+    <string name="not_very_active_title">Not very active</string>
+    <string name="add">+</string>
+    <string name="today">Today</string>
+    <string name="minus">–</string>
+    <string name="_0">0</string>
+    <string name="equal">=</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="add_item">+ Add Item</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_add_item_info">AddItemInfo</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+</resources>
