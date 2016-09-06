@@ -4,24 +4,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.shafagh.myfitnesshealthapplication.LogIn">
+    tools:context="com.shafagh.myfitnesshealthapplication.LogIn"
+    android:weightSum="7">
 
     <include
         android:id="@id/app_bar"
         layout="@layout/app_bar" />
 
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"/>
+
     <EditText
+        android:layout_weight="1"
         android:id="@+id/LogIn_userName"
         android:maxLength="50"
+        android:hint="User Name"
+        android:textSize="20dp"
         style="@style/RLmargin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="0dp" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"/>
 
     <EditText
         android:id="@+id/LogIn_password"
         style="@style/RLmargin"
+        android:textSize="20dp"
+        android:hint="Password"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp"
         android:inputType="textPassword" />
 
     <Button

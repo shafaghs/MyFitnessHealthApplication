@@ -32,13 +32,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".SignUp" />
         </activity>
+        <activity
+            android:name=".serachItem.DetailItemInfo"
+            android:label="General Information">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".serachItem.AddItemInfo" />
+        </activity>
         <activity android:name=".SignUpPageCon">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".SignUpPage" />
         </activity>
         <activity android:name=".Dairy" />
-        <activity android:name=".AddItemInfo">
+        <activity android:name=".serachItem.AddItemInfo">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Dairy" />
