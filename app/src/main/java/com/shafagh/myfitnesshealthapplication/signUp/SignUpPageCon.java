@@ -1,22 +1,22 @@
-package com.shafagh.myfitnesshealthapplication;
+package com.shafagh.myfitnesshealthapplication.signUp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import com.shafagh.myfitnesshealthapplication.R;
 
 import java.util.Calendar;
 
 public class SignUpPageCon extends AppCompatActivity {
 
-    String gender,weight,height,birthDay,activityLevel;
+    String gender,weight,height,birthDay;
+    private View rootView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class SignUpPageCon extends AppCompatActivity {
         weight = bn.getString("weight");
         height = bn.getString("height");
         birthDay = bn.getString("birthDay");
+        rootView = findViewById(android.R.id.content);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
@@ -36,24 +37,9 @@ public class SignUpPageCon extends AppCompatActivity {
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+
     }
 
-
-    @Override
-    public boolean onPrepareOptionsMenu(final Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        int id = item.getItemId();
-        if(id == android.R.id.home){
-            Intent parent = NavUtils.getParentActivityIntent(this);
-            NavUtils.shouldUpRecreateTask(this,parent);
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
     public void submit(View view){
         Double hbf=0.0;
@@ -117,8 +103,24 @@ public class SignUpPageCon extends AppCompatActivity {
         Log.i("info",gender+","+weight+","+height+","+birthDay);
 
         Double dailyCalories = hbf * BMR;
-        Intent intent = new Intent(this,Dairy.class).putExtra("dailyCalories",dailyCalories);
-        startActivity(intent);
+        float roundDailyCalories = (float)Math.round(dailyCalories);
+        float roundBmr = (float)Math.round(BMR);
+
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putFloat("dailyCalories", roundDailyCalories);
+        editor.apply();
+
+        if(hbf != 0.0){
+            String method = "subUserInfo";
+            String bmr,roundDailyCalorie;
+            bmr = String.valueOf(roundBmr);
+            roundDailyCalorie = String.valueOf(roundDailyCalories);
+
+            BgTask bgTask = new BgTask(this,rootView);
+            bgTask.execute(method,gender,weight,height,birthDay,bmr,roundDailyCalorie);}
+
     }
+
 }
 
